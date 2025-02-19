@@ -7,6 +7,7 @@ Beatrice_length = 0
 Benedick_lines = 0
 Benedick_length = 0
 
+# split the text into separate strings wherever there is a double empty line (\n\n) i.e. into individual dialogues.
 for line in play.split("\n\n"):
     if line.startswith("BEATRICE"):
         Beatrice_lines += 1
@@ -20,5 +21,3 @@ for line in play.split("\n\n"):
 
 print("Beatrice has " + str(Beatrice_lines) + " lines comprising " + str(Beatrice_length) + " characters, while Benedick has " + str(Benedick_lines) + " lines comprising " + str(Benedick_length) + " characters.")
         
-
-
