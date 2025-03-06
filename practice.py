@@ -11,3 +11,16 @@ def dupes(numbers):
     return False
 
 print(dupes([3,5,2,7,5]))
+
+text = "here are some quotation marks inside of a string: \"\'\'\""
+print(text)
+
+rocky = ["Rocky","Shane","Texas Heeler"]
+maple = ["Maple", "Amanda", "Hound"]
+bofur = ["Bofur", "Ronda", "Corgi"]
+dogs = [rocky,maple,bofur]
+
+with open('dogs.csv', "w") as outfile:
+    outfile.write(",".join(["Dog","Owner","Breed"]))
+    for dog in dogs:
+        outfile.write("\n"+",".join(dog))
